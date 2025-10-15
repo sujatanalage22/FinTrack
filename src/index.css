@@ -1,0 +1,231 @@
+/* ===== GLOBAL ===== */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f0f4f8;
+  margin: 0;
+  padding: 20px;
+  color: #1f2937;
+}
+
+h2 {
+  color: #1e3a8a;
+  text-align: center;
+}
+
+/* ===== CARD ===== */
+.card {
+  background: linear-gradient(145deg, #ffffff, #f3f6ff);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== SUMMARY ===== */
+.summary-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.category-summary {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.category-badge {
+  padding: 6px 14px;
+  border-radius: 16px;
+  color: #fff;
+  font-weight: 600;
+  margin: 4px;
+  transition: transform 0.3s;
+}
+
+.category-badge:hover {
+  transform: scale(1.1);
+}
+
+/* Category colors */
+.category-badge.Food { background: #ef4444; }         /* Red */
+.category-badge.Utilities { background: #f59e0b; }   /* Orange */
+.category-badge.Entertainment { background: #3b82f6; }/* Blue */
+.category-badge.Other { background: #10b981; }       /* Green */
+
+/* ===== TOP BAR ===== */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  background: linear-gradient(135deg,#6366f1,#8b5cf6);
+  color: #fff;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-decoration: none;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(99, 102, 241, 0.4);
+}
+
+.btn.cancel {
+  background: linear-gradient(135deg,#f3f4f6,#d1d5db);
+  color: #374151;
+}
+
+/* ===== FILTERS ===== */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.filters input,
+.filters select {
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid #d1d5db;
+  transition: 0.2s;
+}
+
+.filters input:focus,
+.filters select:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 6px rgba(99,102,241,0.4);
+}
+
+/* ===== EXPENSE ITEM ===== */
+.expense-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  background: linear-gradient(135deg,#ffffff,#f9f9ff);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.expense-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.expense-title {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.meta {
+  color: #6b7280;
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+.badge {
+  padding: 4px 12px;
+  border-radius: 12px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.8rem;
+  margin-left: 8px;
+  transition: transform 0.2s;
+}
+
+.badge.Food { background: #ef4444; }
+.badge.Utilities { background: #f59e0b; }
+.badge.Entertainment { background: #3b82f6; }
+.badge.Other { background: #10b981; }
+
+.badge:hover {
+  transform: scale(1.1);
+}
+
+/* ===== ICON BUTTONS ===== */
+.icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.4rem;
+  color: #6366f1;
+  margin-left: 10px;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.icon-btn:hover {
+  transform: scale(1.2);
+  color: #8b5cf6;
+}
+
+/* ===== EMPTY STATE ===== */
+.empty {
+  text-align: center;
+  color: #9ca3af;
+  font-style: italic;
+}
+
+/* ===== ADD/EDIT FORM ===== */
+.form-card {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 25px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group select {
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid #d1d5db;
+  transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 6px rgba(99,102,241,0.4);
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-start;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+  .filters { flex-direction: column; }
+  .top-bar { flex-direction: column; align-items: flex-start; gap: 10px; }
+}
